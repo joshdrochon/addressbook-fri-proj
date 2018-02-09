@@ -1,0 +1,22 @@
+<h1>Address Book</h1>
+<h2>Add new contact:</h2>
+<form action="/contacts" method="post">
+<!-- <form action="/items" method="post"> -->
+
+<!--when new Contact is instantiated in ContactsController, it pulls the id
+of each input and passes it in as its required arguments-->
+
+  <label for="new-name">Name:</label>
+  <input id="new-name" name="new-name" type="text">
+
+  <label for="new-email">Email:</label>
+  <input id="new-email" name="new-email" type="email">
+
+  <label for="new-phone">Phone:</label>
+  <input id="new-phone" name="new-phone" type="number">
+
+
+
+
+  <button type="submit">Add Contact</button>
+</form>

@@ -1,0 +1,60 @@
+<style media="screen">
+
+body{
+  background-color: AliceBlue;
+}
+
+.container{
+  max-width: 60%;
+  background-color: lightblue;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 20px;
+  text-align: center;
+  margin: auto;
+}
+
+  li{
+    list-style-type: none;
+    display: block;
+    padding: 10px;
+    font-family: helvetica;
+    border-radius: 10px;
+    font-family: cursive;
+  }
+
+  h1{
+    font-family: cursive;
+  }
+
+  hr{
+    border-color: gray;
+  }
+
+  #endContact{
+    border: 1px solid black;
+  }
+
+</style>
+
+
+<!--each new Contact is an instance of the Contact class-->
+
+
+<div class="container">
+  <h1>Contacts Book</h1>
+  <ul>
+    @foreach (var contact in Model)
+    {
+      <li>@contact.GetName()</li>
+      <hr>
+      <li>@contact.GetEmail()</li>
+      <hr>
+      <li>@contact.GetPhone()</li>
+      <hr id="endContact">
+    }
+  </ul>
+  <p><a href="/contacts/new">Add Contact</a></p>
+  <form action="/contacts/delete" method="post">
+    <button type="submit" name="button">Clear All Contacts</button>
+  </form>
+</div>
